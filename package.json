@@ -1,6 +1,8 @@
 {
-  "main": "dist/index.tsx",
   "private": false,
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "source": "src/index.tsx",
   "files": [
     "dist",
     "README.md"
@@ -10,14 +12,14 @@
     "url": "https://github.com/pavan-synechron/POC_lib.git"
   },
   "name": "synepoc_library",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "@types/jest": "^26.0.24",
     "@types/node": "^12.20.19",
-    "@types/react": "^17.0.18",
+    "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "node-sass": "^6.0.1",
     "typescript": "^4.3.5",
@@ -35,7 +37,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "build-lib": "rollup -C",
+    "build-lib": "rollup -c",
     "clean": "rimraf dist",
     "compile": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__"
   },
@@ -72,6 +74,7 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
+    "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@storybook/addon-actions": "^6.3.7",
     "@storybook/addon-essentials": "^6.3.7",
@@ -83,8 +86,11 @@
     "cross-env": "^7.0.3",
     "rollup": "^2.56.2",
     "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-typescript2": "^0.30.0"
   }
 }
