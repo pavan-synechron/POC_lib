@@ -1,5 +1,5 @@
 {
-  "main": "dist/index.js",
+  "main": "dist/index.tsx",
   "private": false,
   "files": [
     "dist",
@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/pavan-synechron/POC_lib.git"
   },
-  "name": "poc_library",
+  "name": "synepoc_library",
   "version": "0.1.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
