@@ -4,6 +4,11 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var jsxRuntime = require('react/jsx-runtime');
 require('react');
+var classNames = require('classnames');
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var classNames__default = /*#__PURE__*/_interopDefaultLegacy(classNames);
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -54,4 +59,14 @@ Button.defaultProps = {
     size: 'medium',
 };
 
+var Input = function (_a) {
+    var type = _a.type, label = _a.label, placeholder = _a.placeholder, className = _a.className; _a.error; var field = _a.field, _b = _a.form, touched = _b.touched, errors = _b.errors; __rest(_b, ["touched", "errors"]); var props = __rest(_a, ["type", "label", "placeholder", "className", "error", "field", "form"]);
+    return (jsxRuntime.jsxs("div", __assign({ className: classNames__default['default']("form-group", className, {
+            error: touched[field.name] && errors[field.name],
+        }) }, { children: [label && (jsxRuntime.jsx("label", __assign({ className: "form-label", htmlFor: field.name }, { children: label }), void 0)), jsxRuntime.jsx("input", __assign({ type: type, className: classNames__default['default']("form-control", {
+                    "is-invalid": touched[field.name] && errors[field.name],
+                }), placeholder: placeholder }, field, props), void 0), touched[field.name] && errors[field.name] && (jsxRuntime.jsx("div", __assign({ className: "invalid-feedback" }, { children: errors[field.name] }), void 0))] }), void 0));
+};
+
 exports.Button = Button;
+exports.Input = Input;

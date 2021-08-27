@@ -1,5 +1,6 @@
-import { jsx } from 'react/jsx-runtime';
+import { jsx, jsxs } from 'react/jsx-runtime';
 import 'react';
+import classNames from 'classnames';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -50,4 +51,13 @@ Button.defaultProps = {
     size: 'medium',
 };
 
-export { Button };
+var Input = function (_a) {
+    var type = _a.type, label = _a.label, placeholder = _a.placeholder, className = _a.className; _a.error; var field = _a.field, _b = _a.form, touched = _b.touched, errors = _b.errors; __rest(_b, ["touched", "errors"]); var props = __rest(_a, ["type", "label", "placeholder", "className", "error", "field", "form"]);
+    return (jsxs("div", __assign({ className: classNames("form-group", className, {
+            error: touched[field.name] && errors[field.name],
+        }) }, { children: [label && (jsx("label", __assign({ className: "form-label", htmlFor: field.name }, { children: label }), void 0)), jsx("input", __assign({ type: type, className: classNames("form-control", {
+                    "is-invalid": touched[field.name] && errors[field.name],
+                }), placeholder: placeholder }, field, props), void 0), touched[field.name] && errors[field.name] && (jsx("div", __assign({ className: "invalid-feedback" }, { children: errors[field.name] }), void 0))] }), void 0));
+};
+
+export { Button, Input };

@@ -12,7 +12,7 @@
     "url": "https://github.com/pavan-synechron/POC_lib.git"
   },
   "name": "synepoc_library",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -83,6 +83,7 @@
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.7",
     "babel-loader": "^8.2.2",
+    "classnames": "^2.3.1",
     "cross-env": "^7.0.3",
     "rollup": "^2.56.2",
     "rollup-plugin-babel": "^4.4.0",
